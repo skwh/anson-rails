@@ -1,0 +1,30 @@
+<h2>Projects</h2>
+<p>Anson is really good at making stuff.</p>
+<hr />
+<h3>3D Design</h3>
+<% @design.each do |project| %>
+<div>
+	<h5><%= project.title %></h5>
+	<p><%= project.description %></p>
+	<p>Images go here</p>
+</div>
+<% end %>
+<hr />
+<h3>Digital Art</h3>
+<% @art.each do |project| %>
+<div>
+	<h5><%= project.title %></h5>
+	<p><%= project.description %></p>
+	<p>Images go here</p>
+</div>
+<% end %>
+<hr />
+<h3>Visual Effects</h3>
+<% @effects.each do |project| %>
+<div>
+	<h5><%= project.title %></h5>
+	<p><%= project.description %></p>
+	<p>Images go here</p>
+</div>
+<% end %>
+<hr />
