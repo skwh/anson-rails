@@ -9,4 +9,11 @@ module ApplicationHelper
 		end
 	end
 
+	def current_page(page_title)
+		if page_title.empty?
+			"large"
+		else
+			"small"
+		end
+	end
 end

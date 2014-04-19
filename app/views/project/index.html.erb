@@ -1,31 +1,35 @@
 <% provide(:title,"Projects") %>
-<%= render 'shared/small_header' %>
-<h2>Projects</h2>
-<p>Anson is really good at making stuff.</p>
-<hr />
-<h3>3D Design</h3>
+<div class="project_header">
+	<h2>Projects</h2>
+	<p>Anson is really good at making stuff.</p>
+</div>
+<div class="section">
+<h3 name="design">3D Design</h3>
 <% @design.each do |project| %>
-<div>
-	<h5><%= project.title %></h5>
-	<p><%= project.description %></p>
+<div class="subsection">
+	<h4 class="project_title"><%= project.title %></h4>
+	<p class="project_description"><%= project.description %></p>
 	<p>Images go here</p>
 </div>
 <% end %>
-<hr />
-<h3>Digital Art</h3>
+</div>
+<div class="section">
+<h3 name="art">Digital Art</h3>
 <% @art.each do |project| %>
-<div>
-	<h5><%= project.title %></h5>
-	<p><%= project.description %></p>
+<div class="subsection">
+	<h4 class="project_title"><%= project.title %></h4>
+	<p class="project_description"><%= project.description %></p>
 	<p>Images go here</p>
 </div>
 <% end %>
-<hr />
-<h3>Visual Effects</h3>
+</div>
+<div class="section">
+<h3 name="effects">Visual Effects</h3>
 <% @effects.each do |project| %>
-<div>
-	<h5><%= project.title %></h5>
-	<p><%= project.description %></p>
+<div class="subsection">
+	<h4 class="project_title"><%= project.title %></h4>
+	<p class="project_description"><%= project.description %></p>
 	<p>Images go here</p>
 </div>
 <% end %>
+</div>

@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body, html {
+	margin:0;
+}
+body {
+	background-color:#214c90;
+	font-family: sans-serif;
+}
+#site_body {
+	margin:auto;
+	width:75%;
+	background-color:#334;
+	border-style: none ridge ridge;
+	border-color:#ccc;
+	border-width: 5px;
+	padding:10px;
+	color:#ccc;
+	box-shadow: 10px 10px 15px #111111;
+}
+#header_large {
+	background-color:#ccc;
+	margin:0;
+	padding:10px;
+	border-bottom-style:solid;
+	border-bottom-width:2px;
+	border-bottom-color:#000;
+	.title {
+		text-align: center;
+		margin-bottom: 10px;
+		margin-top: 5px;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		a:hover {
+			color:#214c90;
+		}
+	}
+	div.centerme {
+		margin:auto;
+		width:545px;
+		margin-bottom: 10px;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		li {
+			display:inline-block;
+			a {
+				margin:5px;
+				font-size:20pt;
+				text-decoration: none;
+				color: inherit;
+			}
+			a:hover {
+				color:#334;
+			}
+		}
+		li.header_item {
+			border-right:1px solid #334;
+		}
+	}
+}
+
+#header_small {
+	background-color:#ccc;
+	margin:0;
+	padding:10px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		li {
+			display:inline-block;
+			a {
+				margin:5px;
+				font-size:19pt;
+				text-decoration: none;
+				color: inherit;
+			}
+			a:hover {
+				color:#334;
+			}
+			a.big_item {
+				margin:10px;
+				font-size:23pt;
+			}
+			a.big_item:hover {
+				color:#214c90;
+			}
+		}
+		li.header_item {
+			border-right:1px solid #334;
+		}
+	}
+}
