@@ -1,4 +1,4 @@
-FusionDigitalRails::Application.configure do
+AnsonRails::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,4 +26,6 @@ FusionDigitalRails::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.assets.paths << Rails.root.join('app','assets','fonts')
 end

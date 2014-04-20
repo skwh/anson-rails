@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FusionDigitalRails::Application.config.secret_key_base = '99ee90e1e7bbe640ccafcbc1aeb08476fdf82996317b6062707ec5a59aa8916fe75385a740b7399166eea9a28b50525934a4b872efd1107f229d442036a8ac8f'
+AnsonRails::Application.config.secret_key_base = '99ee90e1e7bbe640ccafcbc1aeb08476fdf82996317b6062707ec5a59aa8916fe75385a740b7399166eea9a28b50525934a4b872efd1107f229d442036a8ac8f'

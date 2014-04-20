@@ -7,9 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'shared/'+current_page(yield(:title)) +'_header' %>
+<%= render 'shared/header' %>
 <div id="site_body">
 <%= yield %>
 </div>
+<%= render 'shared/footer' %>
 </body>
 </html>

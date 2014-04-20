@@ -1,8 +1,9 @@
-FusionDigitalRails::Application.routes.draw do
+AnsonRails::Application.routes.draw do
   
   root 'static_pages#home'
 
   get '/contact' => 'static_pages#contact'
+  get '/about' => 'static_pages#about'
 
   get '/projects' => 'project#index'
   get '/projects/:id' => 'project#show'

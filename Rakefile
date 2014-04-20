@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FusionDigitalRails::Application.load_tasks
+AnsonRails::Application.load_tasks
