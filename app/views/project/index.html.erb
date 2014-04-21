@@ -1,35 +1,52 @@
 <% provide(:title,"Projects") %>
 <div class="project_header">
 	<h2>Projects</h2>
-	<p>Anson is really good at making stuff.</p>
 </div>
 <div class="section">
-<h3 name="design">3D Design</h3>
+<h3><a name="design">3D Design</a></h3>
 <% @design.each do |project| %>
 <div class="subsection">
-	<h4 class="project_title"><%= project.title %></h4>
-	<p class="project_description"><%= project.description %></p>
-	<p>Images go here</p>
+	<div class="left_align">
+		<h4 class="project_title"><%= project.title %></h4>
+		<h5 class="project_subtitle"><%= project.subtitle %></h5>
+		<hr />
+		<p class="project_description"><%= project.description %></p>
+	</div>
+	<div class="right_align">
+		<p>Images go here</p>
+	</div>
 </div>
 <% end %>
 </div>
 <div class="section">
-<h3 name="art">Digital Art</h3>
+<h3><a name="art">Digital Art</a></h3>
 <% @art.each do |project| %>
 <div class="subsection">
-	<h4 class="project_title"><%= project.title %></h4>
-	<p class="project_description"><%= project.description %></p>
-	<p>Images go here</p>
+	<div class="left_align">
+		<h4 class="project_title"><%= project.title %></h4>
+		<h5 class="project_subtitle"><%= project.subtitle %></h5>
+		<hr />
+		<p class="project_description"><%= project.description %></p>
+	</div>
+	<div class="right_align">
+		<p>Images go here</p>
+	</div>
 </div>
 <% end %>
 </div>
 <div class="section">
-<h3 name="effects">Visual Effects</h3>
+<h3><a name="effects">Visual Effects</a></h3>
 <% @effects.each do |project| %>
 <div class="subsection">
-	<h4 class="project_title"><%= project.title %></h4>
-	<p class="project_description"><%= project.description %></p>
-	<p>Images go here</p>
+	<div class="left_align">
+		<h4 class="project_title"><%= project.title %></h4>
+		<h5 class="project_subtitle"><%= project.subtitle %></h5>
+		<hr />
+		<p class="project_description"><%= project.description %></p>
+	</div>
+	<div class="right_align">
+		<p>Images go here</p>
+	</div>
 </div>
 <% end %>
 </div>

@@ -6,28 +6,77 @@ div.project_header {
 	margin:5px;
 	h2 {
 		margin: 0px auto;
-		font-size:20pt;
-	}
-	p {
-		margin-top: 0px;
+		font-size:30pt;
+		letter-spacing: 3px;
+		color:#36b;
+		text-shadow: 1px 1px 6px #2428AD;
+		font-family: "Futura", Stentiga, sans-serif;
+		/*border-bottom: 1px solid #ccc;*/
 	}
 }
 .section {
 	margin:5px;
 	padding:5px;
 	h3 {
-		font-size:19pt;
+		font-size:20pt;
 		margin: 0px auto;
+		color:#ccc;
+		text-shadow: 1px 1px 6px #36b;
 	}
 }
 .subsection {
-	border:1px solid #ccc;
+	border:1px solid #00000F;
+	border-radius: 25px;
 	margin:5px 7px;
-	padding:5px;
+	padding:10px;
+	background-image:url('section_slice.jpg');
+	background-repeat: repeat-x;
+	background-color: #0000FF;
+	height:390px;
+	overflow: hidden;
+	color:white;
+
+	div {
+		display:inline-block;
+	}
+
+	.left_align, .right_align {
+		width: 45%;
+	}
+
+	.left_align {
+		margin: 0px 20px;
+		float:left;
+	}
+	.right_align {
+		float:right;
+	}
+
+	.project_title, .project_subtitle {
+		text-transform: uppercase;
+		margin-left: 5px;
+	}
+
 	h4.project_title {
-		margin: 0px auto;
+		margin:5px 0px 5px 5px;
+		font-size:20pt;
+		letter-spacing: 3px; 
+		text-shadow: 1px 1px 6px #000000;
+	}
+
+	h5.project_subtitle {
+		margin-top:0px;
+		margin-bottom: 5px;
+		font-size:15pt;
+		color:#36b;
+		text-shadow: 1px 1px 6px #2428AD;
 	}
 	p.project_description {
 		margin-left:5px;
+		overflow: auto;
+		color:#c4c4c4;
+		letter-spacing: 1px;
+		line-height: 20px;
+		text-align: justify;
 	}
 }

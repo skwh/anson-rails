@@ -27,10 +27,6 @@ body {
 #site_body {
 	margin:auto;
 	width:75%;
-	background-color:#334;
-	border-style: none ridge ridge;
-	border-color:#ccc;
-	border-width: 5px;
 	padding:10px;
 	color:#ccc;
 }
@@ -59,7 +55,7 @@ body {
 			letter-spacing: 1px;
 		}
 		.des {
-			font-size: 20pt;
+			font-size: 17pt;
 			letter-spacing: 5px;
 			padding:5px;
 		}
@@ -94,7 +90,7 @@ body {
 		}
 		li:hover {
 			color:#36b;
-			text-shadow: 1px 1px 6px #36b;
+			text-shadow: 1px 1px 6px #2428AD;
 		}
 	}
 }
@@ -102,7 +98,11 @@ body {
 .current_page {
 	background-color:#262620;
 	color:#36b;
-	text-shadow: 1px 1px 6px #36b;
+	text-shadow: 1px 1px 6px #2428AD;
+}
+
+.header_page {
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5), 1px -1px 10px #36b;
 }
 
 .nolink {
