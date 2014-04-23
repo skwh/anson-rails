@@ -8,6 +8,10 @@ AnsonRails::Application.routes.draw do
   get '/projects' => 'project#index'
   get '/projects/:id' => 'project#show'
 
+  get '/design' => 'project#design'
+  get '/art' => 'project#art'
+  get '/effects' => 'project#effects'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

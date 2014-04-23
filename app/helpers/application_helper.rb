@@ -14,10 +14,14 @@ module ApplicationHelper
 			1
 		elsif fullpath == "/about"
 			2
-		elsif fullpath == "/contact"
+		elsif fullpath == "/design"
 			3
-		else
+		elsif fullpath == "/art"
 			4
+		elsif fullpath == "/effects"
+			5
+		else
+			6
 		end
 	end
 end

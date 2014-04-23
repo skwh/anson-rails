@@ -6,6 +6,18 @@ class ProjectController < ApplicationController
 		@effects = Project.where(section:"effects")
 	end
 
+	def design
+		@design = Project.where(section:"design")
+	end
+
+	def art
+		@art = Project.where(section:"art")
+	end
+
+	def effects
+		@effects = Project.where(section:"effects")
+	end
+
 	def show
 		@project = Project.find(params[:id])
 	end

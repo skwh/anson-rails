@@ -44,7 +44,7 @@ body {
 		height:43px;
 		text-align: center;
 		font-size: 25pt;
-		text-shadow: 0 1px 0 rgba(255,255,255,.5), 0 -1px 0 rgba(0,0,0,.8);
+		text-shadow: 0 2px 0 rgba(255,255,255,.5), 0 -1px 0 rgba(0,0,0,.8);
 		p {
 			margin:0;
 			padding:3px;
@@ -73,7 +73,7 @@ body {
 		margin: auto;
 		padding: 0;
 		overflow: hidden;
-		width:605px;
+		width:495px;
 		li {
 			display:inline-block;
 			text-transform: uppercase;
@@ -99,10 +99,6 @@ body {
 	background-color:#262620;
 	color:#36b;
 	text-shadow: 1px 1px 6px #2428AD;
-}
-
-.header_page {
-	text-shadow: 0 1px 0 rgba(255,255,255,0.5), 1px -1px 10px #36b;
 }
 
 .nolink {
