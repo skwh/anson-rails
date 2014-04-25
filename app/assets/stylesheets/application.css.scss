@@ -60,7 +60,7 @@ body {
 			padding:5px;
 		}
 		.name:hover, .des:hover {
-			text-shadow: 0 1px 0 rgba(255,255,255,0.5), 1px -1px 1px #36b;
+			text-shadow: 0 2px 0 rgba(255,255,255,0.5), 1px -1px 1px #36b;
 		}
 	}
 	div#header_navbar {
@@ -72,15 +72,15 @@ body {
 		list-style-type: none;
 		margin: auto;
 		padding: 0;
-		overflow: hidden;
-		width:495px;
+		width:481px;
 		li {
 			display:inline-block;
 			text-transform: uppercase;
 			padding:10px;
-			border-style: solid;
+			border-style: groove;
 			border-color: rgba(53,53,53,0.5);
 			border-width: 0px 2px;
+			margin: 0px -2px;
 			a {
 				margin:5px;
 				font-size:11pt;
@@ -90,6 +90,7 @@ body {
 		}
 		li:hover {
 			color:#36b;
+			background-color:#262620;
 			text-shadow: 1px 1px 6px #2428AD;
 		}
 	}
@@ -99,6 +100,10 @@ body {
 	background-color:#262620;
 	color:#36b;
 	text-shadow: 1px 1px 6px #2428AD;
+}
+
+.header_current_page {
+	text-shadow: 0 2px 0 rgba(255,255,255,0.5), 1px -1px 1px #36b;
 }
 
 .nolink {
