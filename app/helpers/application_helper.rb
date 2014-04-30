@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 module ApplicationHelper
 
 	def full_title(page_title)
@@ -24,4 +26,15 @@ module ApplicationHelper
 			6
 		end
 	end
+
+	def check_password(pw)
+		master_pw_digest = Password.first.password_digest.to_s
+		given_pw_digest = Digest::SHA1.hexdigest(pw.to_s)
+		if pw == master_pw
+			true
+		else
+			false
+		end
+	end
+
 end
