@@ -26,4 +26,18 @@ class ProjectController < ApplicationController
 		@project = Project.new
 	end
 
+	def create
+		@project = Project.create(project_params)
+		if @project.save
+			flash[:sucess] = "Project Submitted."
+			redirect_to "/#{@project.section}"
+		else
+			render "new"
+		end
+	end
+
+	private
+		def project_params
+			params.require(:project).permit(:title, :description, :section, :subtitle)
+		end
 end

@@ -7,6 +7,8 @@ AnsonRails::Application.routes.draw do
 
   get '/projects' => 'project#index'
   get '/projects/:id' => 'project#show'
+  get '/newproj' => "project#new"
+  post '/projects' => "project#create"
 
   get '/design' => 'project#design'
   get '/art' => 'project#art'
