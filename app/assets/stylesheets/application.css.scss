@@ -51,6 +51,7 @@ body {
 	margin:0;
 	font-family: "Futura", sans-serif;
 	div#header_title {
+		color: rgb(30,30,30);
 		font-family: Stentiga, "Futura", sans-serif;
 		background-color: $darkgrey;
 		background-image:url('header_slice.jpg');
@@ -60,43 +61,55 @@ body {
 		height:43px;
 		text-align: center;
 		font-size: 25pt;
-		text-shadow: 0 2px 0 rgba(255,255,255,.5), 0 -1px 0 rgba(0,0,0,.8);
+		text-shadow: 0 1px 0 rgba(255,255,255,.5);
+		z-index: 5;
+		box-shadow:0px 1px 10px 3px rgba(0,0,0,0.3);
+		position:relative;
 		p {
 			margin:0;
-			padding:3px;
+			padding:5px;
+			font-size:20pt;
 		}
 		.name {
-			font-size:25pt;
+			font-size:20pt !important;
 			padding:5px;
+			padding-bottom:7px;
 			letter-spacing: 1px;
 		}
 		.des {
-			font-size: 17pt;
+			font-size: 14pt !important;
 			letter-spacing: 5px;
 			padding:5px;
+			vertical-align: 5%;
+			font-weight: 600;
 		}
-		.name:hover, .des:hover {
+		/*.name:hover, .des:hover {
 			text-shadow: 0 2px 0 rgba(255,255,255,0.5), 1px -1px 1px $lightblue;
-		}
+		}*/
 	}
 	div#header_navbar {
 		background-color: $grey;
 		color:$lightgrey;
 		border-bottom: 3px solid $darkgrey;
+		z-index:1;
 	}
 	ul {
 		list-style-type: none;
 		margin: auto;
 		padding: 0;
-		width:481px;
+		width:526px;
 		li {
 			display:inline-block;
 			text-transform: uppercase;
-			padding:10px;
-			border-style: groove;
-			border-color: rgba(53,53,53,0.2);
-			border-width: 0px 2px;
-			margin: 0px -2px;
+			padding:5px 15px;
+			border-style: solid;
+			border-top-style:none;
+			border-bottom-style:none;
+			border-right-color: rgba(53,53,53,0.2);
+			border-left-color: rgba(255,255,255,0.2);
+			border-width: 0px 1px;
+			margin: 0px -3px;
+			font-weight:bold;
 			a {
 				margin:5px;
 				font-size:11pt;
@@ -153,7 +166,7 @@ div#footer {
 }
 
 .header_current_page {
-	text-shadow: 0 2px 0 rgba(255,255,255,0.5), 1px -1px 1px $lightblue;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 
 .nolink {
