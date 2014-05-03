@@ -1,0 +1,18 @@
+<% provide(:title, "Editing #{@project.title}") %>
+<div class="subsection">
+	<div class="generate_form">
+		<%= form_for(@project) do |f| %>
+			<h2>Edititng <%= @project.title %></h2>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+			<br />
+			<%= f.label :subtitle %>
+			<%= f.text_field :subtitle %>
+			<br />
+			<%= f.label :description %><br />
+			<%= f.text_area :description %>
+			<br />
+			<%= f.submit "Submit" %>
+		<% end %>
+	</div>
+</div>

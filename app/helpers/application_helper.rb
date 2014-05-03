@@ -29,12 +29,15 @@ module ApplicationHelper
 
 	def check_password(pw)
 		master_pw_digest = Password.first.password_digest.to_s
-		given_pw_digest = Digest::SHA1.hexdigest(pw.to_s)
-		if pw == master_pw
+		given_pw_digest = Digest::SHA1.hexdigest pw.to_s
+		if given_pw_digest == master_pw_digest
 			true
 		else
 			false
 		end
 	end
 
+	def store_location
+    	session[:return_to] = request.url
+  	end
 end

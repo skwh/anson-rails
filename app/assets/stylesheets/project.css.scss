@@ -40,6 +40,11 @@ div.project_header {
 		display:inline-block;
 	}
 
+	.editing_controls {
+		font-size: 10pt;
+		color:#ccc;
+	}
+
 	.left_align, .right_align {
 		width: 45%;
 	}
@@ -81,4 +86,8 @@ div.project_header {
 		line-height: 20px;
 		text-align: justify;
 	}
+}
+
+.generate_form {
+	padding:5px;
 }
