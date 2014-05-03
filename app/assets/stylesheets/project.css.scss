@@ -41,7 +41,7 @@ div.project_header {
 	}
 
 	.editing_controls {
-		font-size: 10pt;
+		font-size: 7pt;
 		color:#ccc;
 	}
 
@@ -88,6 +88,13 @@ div.project_header {
 	}
 }
 
-.generate_form {
+.content {
 	padding:5px;
+
+	label {
+		padding: 5px;
+	}
+	form {
+		text-align: justify;
+	}
 }
