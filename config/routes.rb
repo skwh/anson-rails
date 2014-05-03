@@ -5,8 +5,15 @@ AnsonRails::Application.routes.draw do
   get '/contact' => 'static_pages#contact'
   get '/about' => 'static_pages#about'
 
+  post '/verify' => 'project#verify'
+
+  get '/login' => 'static_pages#login'
+
   get '/projects' => 'project#index'
-  get '/projects/:id' => 'project#show'
+  get '/projects/:id' => 'project#show', as: :project
+  get '/projects/:id/edit' => 'project#edit', as: :project_edit
+  get '/projects/:id/delete' => 'project#destroy', as: :project_destroy
+  patch '/projects/:id/' => 'project#update', as: :project_update
   get '/newproj' => "project#new"
   post '/projects' => "project#create"
 

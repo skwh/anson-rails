@@ -1,4 +1,6 @@
 class ProjectController < ApplicationController
+	include ProjectHelper, ApplicationHelper
+	before_action :begin_verification, only: [:new, :edit, :destroy]
 
 	def index
 		@design = Project.where(section:"design")
@@ -34,6 +36,24 @@ class ProjectController < ApplicationController
 		else
 			render "new"
 		end
+	end
+
+	def edit
+		@project = Project.find(params[:id])
+	end
+
+	def update
+		@project = Project.find(params[:id])
+		if @project.update_attributes(project_params)
+			redirect_to @project
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@project = Project.find(params[:id])
+		@project.destroy
 	end
 
 	private

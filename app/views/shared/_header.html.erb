@@ -2,7 +2,7 @@
 	<div id="header_title">
 		<a href="/" class="nolink">
 			<p <% if current_page(request.fullpath) == 6 %> class="header_current_page" <% end %>>
-				<span class="name">anSon adamS</span> | <span class="des">Digital 3D artiSt</span>
+				<span class="name">anSon adamS</span> | <span class="des"> <% if (Time.now.day == 29) && (Time.now.month == 5) %>Birthday Boy<% else %>Digital artiSt<% end %></span>
 			</p>
 		</a>
 	</div>

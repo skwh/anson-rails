@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	include ProjectHelper
 	def home
 	end
 
@@ -6,5 +7,8 @@ class StaticPagesController < ApplicationController
 	end
 
 	def about
+	end
+
+	def login
 	end
 end
