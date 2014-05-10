@@ -1,14 +1,4 @@
 <% provide(:title,"3D Design") %>
 <% @design.each do |project| %>
-<div class="subsection">
-	<div class="left_align">
-		<h4 class="project_title"><%= link_to project.title, '/projects/'+project.id.to_s, {class: 'nolink'} %></h4>
-		<h5 class="project_subtitle"><%= project.subtitle %></h5>
-		<hr />
-		<p class="project_description"><%= project.description %></p>
-	</div>
-	<div class="right_align">
-		<p><%= project.images %></p>
-	</div>
-</div>
+<%= render 'project/project', :project => project %>
 <% end %>

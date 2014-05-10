@@ -45,7 +45,7 @@ class ProjectController < ApplicationController
 	def update
 		@project = Project.find(params[:id])
 		if @project.update_attributes(project_params)
-			redirect_to @project
+			redirect_to "/#{@project.section}"
 		else
 			render 'edit'
 		end
@@ -53,7 +53,9 @@ class ProjectController < ApplicationController
 
 	def destroy
 		@project = Project.find(params[:id])
+		project_section = @project.section
 		@project.destroy
+		redirect_to "/#{project_section}"
 	end
 
 	private

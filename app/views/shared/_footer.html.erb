@@ -1,5 +1,9 @@
 <div id="footer">
 	<p>Copyright 2014 tm tm tm nudist industries not responsible for indecent exposure filler text something to say here
-		<a class="nolink" title="Don't worry about this." href="/newproj"><span class="newbutton">+</span></a>
+		<% if !user_verified? %>
+			<a class="nolink" title="Admin Login" href="/login"><span class="newbutton">L</span></a>
+		<% else %>
+			<a class="nolink" title="New Project" href="/newproj"><span class="newbutton">+</span></a>
+		<% end %>
 	</p>
 </div>

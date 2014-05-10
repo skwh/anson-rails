@@ -9,7 +9,6 @@ AnsonRails::Application.routes.draw do
 
   get '/login' => 'static_pages#login'
 
-  get '/projects' => 'project#index'
   get '/projects/:id' => 'project#show', as: :project
   get '/projects/:id/edit' => 'project#edit', as: :project_edit
   get '/projects/:id/delete' => 'project#destroy', as: :project_destroy

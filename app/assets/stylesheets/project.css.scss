@@ -55,6 +55,12 @@ div.project_header {
 	}
 	.right_align {
 		float:right;
+		margin:10px;
+		margin-top:0px;
+		border:2px solid #ccc;
+		border-radius:15px;
+		overflow:hidden;
+		height:390px;
 	}
 
 	.project_title, .project_subtitle {
@@ -90,22 +96,10 @@ div.project_header {
 
 .content {
 	padding:5px;
-
 	label {
 		padding: 5px;
 	}
 	form {
 		text-align: justify;
-	}
-}
-
-.photo_gallery {
-	position:relative;
-	overflow: auto;
-	li {
-		list-style: none;
-	}
-	ul li {
-		float:left;
 	}
 }
