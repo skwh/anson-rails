@@ -12,7 +12,11 @@ module ProjectHelper
 		else
 			if check_password(params[:password])
 				session[:verified] = true
-				redirect_to session[:return_to]
+				if !session[:return_to].nil?
+					redirect_to session[:return_to]
+				else
+					redirect_to :root
+				end
 			else
 				redirect_to '/login'
 			end
