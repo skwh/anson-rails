@@ -1,6 +1,6 @@
 class ProjectController < ApplicationController
 	include ProjectHelper, ApplicationHelper
-	before_action :begin_verification, only: [:new, :edit, :destroy]
+	before_action :begin_verification, only: [:new, :edit, :destroy, :create, :update]
 
 	def index
 		@design = Project.where(section:"design")
