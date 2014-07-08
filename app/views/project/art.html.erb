@@ -1,4 +1,10 @@
 <% provide(:title, "Digital Art") %>
-<% @art.each do |project| %>
-<%= render 'project/project', :project => project %>
+<% if !@art.empty? %>
+	<% @art.each do |project| %>
+	<%= render 'project/project', :project => project %>
+	<% end %>
+<% else %>
+	<div id="general_body">
+		<h2>There are no projects in this catergory at this time.</h2>
+	</div>
 <% end %>

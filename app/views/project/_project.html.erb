@@ -4,25 +4,34 @@
 		<h5 class="project_subtitle"><%= project.subtitle %></h5>
 		<hr />
 		<p class="project_description"><%= project.description %>
-			<% if user_verified? %>
-			<br />
-			<span class="editing_controls">
-				<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
-				 | 
-				 <a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
-			</span>
-			<% end %>
 		</p>
 	</div>
+	<% if !project.images.nil? or !project.videos.nil? %>
 	<div class="right_align">
-		<div id="slider_container_<%= project.id %>" style="position: relative; top: 0px; left: 0px; width: 445px; height: 391px; background-color:black;" data-project-id="<%= project.id %>">
-			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 445px; height: 391px;">
-				<% images = project.images.split(',') %>
-				<% images.each do |i| %>
-					<div><img u="image" src=<%= "#{i}" %> /></div>
+		<div id="slider_container_<%= project.id %>" style="position: relative; top: 0px; left: 0px;height: 391px; background-color:black;" data-project-id="<%= project.id %>">
+			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 391px;">
+				<% if !project.images.nil? %>
+					<% images = project.images.split(',') %>
+					<% images.each do |i| %>
+						<div><img u="image" src=<%= "#{i}" %> /></div>
+					<% end %>
+				<% end %>
+				<% if !project.videos.nil? %>
+					<% videos = project.videos.split(',') %>
+					<% videos.each do |i| %>
+						<div><div u="player"><%= render 'project/video_frame', :video_url => i %></div></div>
+					<% end %>
 				<% end %>
 			</div>
 			<%= render 'project/slider_arrow' %>
 		</div>
 	</div>
+	<% end %>
 </div>
+<% if user_verified? %>
+<span class="editing_controls">
+	<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
+	 | 
+	<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
+</span>
+<% end %>

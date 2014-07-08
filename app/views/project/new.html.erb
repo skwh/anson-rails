@@ -10,6 +10,8 @@
 		<%= f.text_area :description, size: "75x12" %></p>
 		<p>For the images, place the urls of the images as a single string without spaces, separated by commas.</p>
 		<p><%= f.label :images %><%= f.text_field :images %></p>
+		<p>For videos, place the YouTube id of the video in a single string without spaces, separated by commas.</p>
+		<p><%= f.label :videos %><%= f.text_field :videos %></p>
 		<p><%= f.label :section %>
 		<select id="project_section" name="project[section]" type="text">
 			<option value="design">3D Design</option>
