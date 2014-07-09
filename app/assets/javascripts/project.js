@@ -32,13 +32,16 @@ ready = function() {
 		//set the width of the slides container to the right align div
 		slides_divs[i].style.width = right_align_dimensions[0];
 		//set the width and height of the video player to the right align div
-		video_divs[i].style.width = right_align_dimensions[0];
-		video_divs[i].style.height = right_align_dimensions[1];
+		if (video_divs.length != 0) {
+			video_divs[i].style.width = right_align_dimensions[0];
+			video_divs[i].style.height = right_align_dimensions[1];
+		}
 		//create the jssor slider object with the current slider's id and the options
 		jssor_slider = new $JssorSlider$('slider_container_'+current_slider_id, options);
 	};
 	//resize the boxes so that the arrows are positioned correctly
 	repositionArrowsAfterResize();
+	Lightbox_plugin();
 }
 window.onresize = function(event) {
 	repositionArrowsAfterResize();

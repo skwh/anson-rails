@@ -13,7 +13,7 @@
 				<% if !project.images.nil? %>
 					<% images = project.images.split(',') %>
 					<% images.each_index do |i| %>
-						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>"><img u="image" src="<%= images[i] %>" /></a></div>
+						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>" u="image"><img u="image" src="<%= images[i] %>" /></a></div>
 					<% end %>
 				<% end %>
 				<% if !project.videos.nil? %>
