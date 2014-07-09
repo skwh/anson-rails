@@ -12,8 +12,8 @@
 			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 391px;">
 				<% if !project.images.nil? %>
 					<% images = project.images.split(',') %>
-					<% images.each do |i| %>
-						<div><img u="image" src=<%= "#{i}" %> /></div>
+					<% images.each_index do |i| %>
+						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>"><img u="image" src="<%= images[i] %>" /></a></div>
 					<% end %>
 				<% end %>
 				<% if !project.videos.nil? %>
