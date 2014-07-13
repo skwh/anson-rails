@@ -2,22 +2,16 @@ class ProjectController < ApplicationController
 	include ProjectHelper, ApplicationHelper
 	before_action :begin_verification, only: [:new, :edit, :destroy, :create, :update]
 
-	def index
-		@design = Project.where(section:"design")
-		@art = Project.where(section:"art")
-		@effects = Project.where(section:"effects")
-	end
-
 	def design
-		@design = Project.where(section:"design")
+		@design = Project.where(section:"design").order(updated_at: :desc)
 	end
 
 	def art
-		@art = Project.where(section:"art")
+		@art = Project.where(section:"art").order(updated_at: :desc)
 	end
 
 	def effects
-		@effects = Project.where(section:"effects")
+		@effects = Project.where(section:"effects").order(updated_at: :desc)
 	end
 
 	def show
