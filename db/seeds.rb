@@ -29,7 +29,9 @@ static_data = StaticData.create(
 	[
 		{
 			owner_page:"home",
-			content:"Welcome"
+			content:"Welcome",
+			slideshow:true,
+			sdata:"../assets/si_1.jpeg,../assets/si_2.jpeg,../assets/si_3.jpeg,../assets/si_4.png"
 		},
 		{
 			owner_page:"about",
