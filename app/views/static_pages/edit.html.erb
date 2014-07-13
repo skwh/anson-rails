@@ -1,0 +1,15 @@
+<% provide(:title, "Editing #{@data.owner_page}") %>
+<div id="general_body">
+	<h1>Editing <%= @data.owner_page %></h1>
+	<hr />
+	<%= form_for(@data) do |f| %>
+		<p><%= f.label :content %>:</p>
+		<%= f.text_area :content, size: "75x12" %><br />
+		<p>Page content can be formatted with <%= link_to "Markdown", "http://daringfireball.net/projects/markdown/syntax" %>.</p>
+		<br/>
+		<p><%= f.label :slideshow %>?<%= f.check_box :slideshow %></p>
+		<p>For the slideshow's images, place the urls of the images as a single string without spaces, separated by commas.</p>
+		<p><%= f.text_field :sdata %></p>
+		<%= f.submit "Submit" %>
+	<% end %>
+</div>

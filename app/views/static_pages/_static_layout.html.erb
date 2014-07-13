@@ -1,0 +1,19 @@
+<div id="general_body">
+	<p><%= data.parsed_content.html_safe %></p>
+	<% if data.slideshow? and !data.sdata.empty? %>
+		<div id="slider" style="position: relative; top: 0px; left: 0px;height: 450px; background-color:black;" >
+			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 450px;">
+				<% if !data.sdata.empty? %>
+					<% images = data.sdata.split(',') %>
+					<% images.each_index do |i| %>
+						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>" u="image"><img u="image" src="<%= images[i] %>" /></a></div>
+					<% end %>
+				<% end %>
+			</div>
+			<%= render 'project/slider_arrow' %>
+		</div>
+	<% end %>
+	<% if user_verified? %>
+		<p><%= link_to "Edit", static_data_edit_path(data), {class:'nolink small_link'} %></p>
+	<% end %>
+</div>

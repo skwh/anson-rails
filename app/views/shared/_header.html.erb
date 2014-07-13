@@ -11,23 +11,23 @@
 			<li 
 			<% if current_page(request.fullpath) == 3 %> class="current_page" <% end %>>
 				<span class="li_wrapper">
-					<a href="/design">3D Design</a>
+					<%= link_to "3D Design", design_path %>
 				</span>
 			</li>
 			<li <% if current_page(request.fullpath) == 4 %> class="current_page" <% end %>>
 				<span class="li_wrapper">
-					<a href="/art">Digital Art</a>
+					<%= link_to "Digital Art", art_path %>
 				</span>
 			</li>
 			<li <% if current_page(request.fullpath) == 5 %> class="current_page" <% end %>>
 				<span class="li_wrapper">
-					<a href="/effects">Visual Effects</a>
+					<%= link_to "Visual Effects", effects_path %>
 				</span>
 			</li>
 			<li
 			<% if current_page(request.fullpath) == 2 %> class="current_page" <% end %>>
 				<span class="li_wrapper">
-					<a href="/about">About</a>
+					<%= link_to "About", about_path %>
 				</span>
 			</li>
 		</ul>

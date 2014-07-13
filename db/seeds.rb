@@ -24,5 +24,24 @@ projects = Project.create([{title:"3D Design Project",
 			images:"../assets/si_1.jpeg,../assets/si_2.jpeg,../assets/si_3.jpeg,../assets/si_4.png",
 			videos:"xjjl9zeJjzw"}])
 puts "Projects seeded!"
+
+static_data = StaticData.create(
+	[
+		{
+			owner_page:"home",
+			content:"Welcome"
+		},
+		{
+			owner_page:"about",
+			content:"About"
+		},
+		{
+			owner_page:"contact",
+			content:"Contact"
+		}
+	]
+)
+puts "Static data seeded!"
+
 passwords = Password.create(password_digest:"3972698d40615a763913d9ae21d117115ff51aa6")
 puts "Password seeded!"

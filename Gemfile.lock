@@ -120,6 +120,7 @@ GEM
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    redcarpet (3.1.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -193,6 +194,7 @@ DEPENDENCIES
   pry
   rails (= 4.0.3)
   rails_12factor (= 0.0.2)
+  redcarpet
   rspec-rails (= 2.11.0)
   sass-rails (~> 4.0.0)
   sdoc

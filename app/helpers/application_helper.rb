@@ -40,4 +40,10 @@ module ApplicationHelper
 	def store_location
     	session[:return_to] = request.url
   	end
+
+  	def markdown(text) #transforms the markdown text to html
+		markdown_obj = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+    :autolink => true, :space_after_headers => true)
+		return markdown_obj.render(text)
+	end
 end

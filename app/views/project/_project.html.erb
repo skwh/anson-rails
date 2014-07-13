@@ -4,6 +4,14 @@
 		<h5 class="project_subtitle"><%= project.subtitle %></h5>
 		<hr />
 		<p class="project_description"><%= project.description %>
+			<% if user_verified? %>
+			<br />
+			<span class="editing_controls">
+				<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
+				 | 
+				<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
+			</span>
+			<% end %>
 		</p>
 	</div>
 	<% if !project.images.nil? or !project.videos.nil? %>
@@ -28,10 +36,3 @@
 	</div>
 	<% end %>
 </div>
-<% if user_verified? %>
-<span class="editing_controls">
-	<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
-	 | 
-	<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
-</span>
-<% end %>

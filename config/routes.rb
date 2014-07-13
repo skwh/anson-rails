@@ -16,6 +16,10 @@ AnsonRails::Application.routes.draw do
   get '/newproj' => "project#new"
   post '/projects' => "project#create"
 
+  get '/page_data/:id' => 'static_pages#static_path', as: :static_datum
+  get '/page_data/:id/edit' => 'static_pages#edit', as: :static_data_edit
+  patch '/page_data/:id' => 'static_pages#update', as: :static_data_update
+
   get '/design' => 'project#design'
   get '/art' => 'project#art'
   get '/effects' => 'project#effects'

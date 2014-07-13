@@ -41,8 +41,8 @@ div.project_header {
 	}
 
 	.editing_controls {
-		font-size: 7pt;
-		color:#ccc;
+		font-size: 12pt;
+		color:#36b;
 	}
 
 	.left_align, .right_align {
@@ -91,6 +91,7 @@ div.project_header {
 		letter-spacing: 1px;
 		line-height: 20px;
 		text-align: justify;
+		max-height:320px;
 	}
 }
 

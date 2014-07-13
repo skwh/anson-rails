@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require jssor.slider.mini.js
+//= require_tree ./general

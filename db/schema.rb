@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708225747) do
+ActiveRecord::Schema.define(version: 20140713090629) do
 
   create_table "passwords", force: true do |t|
     t.string   "password_digest"
@@ -26,8 +26,18 @@ ActiveRecord::Schema.define(version: 20140708225747) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "subtitle"
-    t.string   "images"
-    t.string   "videos"
+    t.text     "images",      limit: 255, default: ""
+    t.text     "videos",      limit: 255, default: ""
+  end
+
+  create_table "static_data", force: true do |t|
+    t.text     "content"
+    t.string   "owner_page"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "parsed_content", default: ""
+    t.boolean  "slideshow",      default: false
+    t.text     "sdata",          default: ""
   end
 
 end
