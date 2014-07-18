@@ -68,30 +68,42 @@ div.project_header {
 	}
 
 	h4.project_title {
-		font-family: Futura, Verdana,"Heveletica", sans-serif;
+		font-family: Futura, Verdana, "Heveletica", sans-serif;
 		margin:5px 0px 5px 5px;
-		font-size:20pt;
-		letter-spacing: 3px; 
-		text-shadow: 1px 1px 6px #000000;
+		font-size:16pt;
+		letter-spacing: 1px;
+		padding: 5px;
+		padding-left:0px; 
+		/*text-shadow: 1px 1px 6px #000000;*/
 	}
 
 	h5.project_subtitle {
 		font-family: Futura, Verdana, "Heveletica", sans-serif;
 		margin-top:0px;
 		margin-bottom: 5px;
-		font-size:15pt;
+		font-size:11pt;
+		letter-spacing: 1px;
 		color:#36b;
 		text-shadow: 1px 1px 6px #2428AD;
+		padding: 5px;
+		padding-left:0px;
 	}
 	p.project_description {
 		font-family: Verdana, Futura, "Heveletica", sans-serif;
 		margin-left:5px;
 		overflow: auto;
-		color:#c4c4c4;
-		letter-spacing: 1px;
+		color:#949494;
+		letter-spacing: 0px;
 		line-height: 20px;
 		text-align: justify;
 		max-height:320px;
+		font-size:10pt;
+	}
+	hr {
+		width:97%;
+		margin-top: 15px;
+		margin-bottom: 18px;
+		border-color:#949494;
 	}
 }
 
