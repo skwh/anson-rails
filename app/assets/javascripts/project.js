@@ -6,6 +6,7 @@ ready = function() {
 	var options = { 
 		$AutoPlay: true,
 		$AutoPlayInterval: 5000,
+		$DragOrientation: 0,
 		$FillMode: 1,
 		$ArrowNavigatorOptions: {
 			$Class: $JssorArrowNavigator$,
