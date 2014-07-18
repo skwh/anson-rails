@@ -2,7 +2,25 @@
 // All this logic will automatically be available in application.js.
 var ready;
 ready = function() {
-	//setup the options for the sliders
+	var subsections = $('.subsection');
+	var left_aligns = $('.left_align');
+	var right_aligns = $('.right_align');
+	//find the width of the aligns for each subsection
+	for (var i=0;i<subsections.length;i++) {
+		var subsection_width = parseInt($(subsections[i]).getStyleObject().width,10);
+		var left_align_width = parseInt($(left_aligns[i]).getStyleObject().width,10);
+		var right_align_width = parseInt($(right_aligns[i]).getStyleObject().width,10);
+		var align_width = left_align_width + right_align_width;
+		//find the amount of avaliable space for margins
+		var av_space = (subsection_width-align_width)/2;
+		if (av_space > 35) {
+			av_space = 35;
+		}
+		//set the margins
+		left_aligns[i].style.marginLeft = av_space + "px";
+		right_aligns[i].style.marginRight = av_space + "px";
+	}
+
 	var options = { 
 		$AutoPlay: true,
 		$AutoPlayInterval: 5000,
@@ -13,25 +31,16 @@ ready = function() {
 			$ChanceToShow: 2
 		}
 	};
-	//get the sliders that exist on the page
 	var slider_divs = $("div[id*='slider']");
-	//get the divs that contain the sliders
 	var right_align_divs = $('div.right_align');
-	//get the divs that contain the slides
 	var slides_divs = $("div[u='slides']");
-	//get the frames that contain videos
 	var video_divs = $("iframe");
 	//placeholder for the jssorslider object
 	var jssor_slider;
-	//loop through the sliders
 	for (var i=0;i<slider_divs.length;i++) {
-		//get the current slider's project id
 		var current_slider_id = slider_divs[i].dataset.projectId;
-		//standardize the right align div's dimensions
 		var right_align_dimensions = [$(right_align_divs[i]).getStyleObject().width, $(right_align_divs[i]).getStyleObject().height];
-		//set the width of the slider container to its parent, the right align div
 		slider_divs[i].style.width = (parseInt(right_align_dimensions[0],10) - 10) + "px";
-		//set the width of the slides container to the right align div
 		slides_divs[i].style.width = (parseInt(right_align_dimensions[0],10) - 10) + "px";
 		//set the width and height of the video player to the right align div
 		if (video_divs.length != 0) {
@@ -43,7 +52,6 @@ ready = function() {
 		//create the jssor slider object with the current slider's id and the options
 		jssor_slider = new $JssorSlider$('slider_container_'+current_slider_id, options);
 	};
-	//resize the boxes so that the arrows are positioned correctly
 	repositionArrowsAfterResize();
 	Lightbox_plugin();
 }
