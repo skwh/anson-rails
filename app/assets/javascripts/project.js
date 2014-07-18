@@ -30,14 +30,14 @@ ready = function() {
 		//standardize the right align div's dimensions
 		var right_align_dimensions = [$(right_align_divs[i]).getStyleObject().width, $(right_align_divs[i]).getStyleObject().height];
 		//set the width of the slider container to its parent, the right align div
-		slider_divs[i].style.width = right_align_dimensions[0];
+		slider_divs[i].style.width = (parseInt(right_align_dimensions[0],10) - 10) + "px";
 		//set the width of the slides container to the right align div
-		slides_divs[i].style.width = right_align_dimensions[0];
+		slides_divs[i].style.width = (parseInt(right_align_dimensions[0],10) - 10) + "px";
 		//set the width and height of the video player to the right align div
 		if (video_divs.length != 0) {
 			for (var k=0;k<video_divs.length;k++) {
-				video_divs[k].style.width = right_align_dimensions[0];
-				video_divs[k].style.height = right_align_dimensions[1];
+				video_divs[k].style.width = (parseInt(right_align_dimensions[0],10) - 10) + "px";
+				video_divs[k].style.height = (parseInt(right_align_dimensions[1],10) - 10) + "px";
 			}
 		}
 		//create the jssor slider object with the current slider's id and the options
