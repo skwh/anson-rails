@@ -1,5 +1,5 @@
 <div id="general_body">
-	<p><%= data.parsed_content.html_safe %></p>
+	<span class="<%= page %>"><%= data.parsed_content.html_safe %></span>
 	<% if data.slideshow? and !data.sdata.empty? %>
 		<div id="slider" style="position: relative; top: 0px; left: 0px;height: 450px; background-color:black;" >
 			<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 450px;">
