@@ -5,6 +5,7 @@ ready = function() {
 	//setup the options for the sliders
 	var options = { 
 		$AutoPlay: true,
+		$AutoPlayInterval: 5000,
 		$FillMode: 1,
 		$ArrowNavigatorOptions: {
 			$Class: $JssorArrowNavigator$,
