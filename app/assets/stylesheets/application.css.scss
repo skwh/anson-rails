@@ -17,6 +17,16 @@
 	src: url('stentiga.otf');
 }
 
+@font-face {
+	font-family: Futura;
+	src: url('Futura.ttc')
+}
+
+@font-face {
+	font-family: Verdana;
+	src: url('Verdana.ttf')
+}
+
 $lightblue:#36b;
 
 $neonblue:#2428AD;
@@ -49,10 +59,10 @@ body {
 
 #header {
 	margin:0 auto;
-	font-family: "Futura", sans-serif;
+	font-family: Futura, sans-serif;
 	div#header_title {
 		color: rgb(30,30,30);
-		font-family: Stentiga, "Futura", sans-serif;
+		font-family: Stentiga, Futura, sans-serif;
 		background-color: $darkgrey;
 		background-image:url('header_slice.jpg');
 		background-repeat: repeat-x;

@@ -10,8 +10,7 @@ div.project_header {
 		letter-spacing: 3px;
 		color:#36b;
 		text-shadow: 1px 1px 6px #2428AD;
-		font-family: "Futura", Stentiga, sans-serif;
-		/*border-bottom: 1px solid #ccc;*/
+		font-family: Futura, Stentiga, sans-serif;
 	}
 }
 .section {
@@ -69,7 +68,7 @@ div.project_header {
 	}
 
 	h4.project_title {
-		font-family:"Futura","Veranda","Heveletica", sans-serif;
+		font-family: Futura, Verdana,"Heveletica", sans-serif;
 		margin:5px 0px 5px 5px;
 		font-size:20pt;
 		letter-spacing: 3px; 
@@ -77,7 +76,7 @@ div.project_header {
 	}
 
 	h5.project_subtitle {
-		font-family: "Futura", "Veranda", "Heveletica", sans-serif;
+		font-family: Futura, Verdana, "Heveletica", sans-serif;
 		margin-top:0px;
 		margin-bottom: 5px;
 		font-size:15pt;
@@ -85,7 +84,7 @@ div.project_header {
 		text-shadow: 1px 1px 6px #2428AD;
 	}
 	p.project_description {
-		font-family: "Verdana", "Veranda", "Futura", "Heveletica", sans-serif;
+		font-family: Verdana, Futura, "Heveletica", sans-serif;
 		margin-left:5px;
 		overflow: auto;
 		color:#c4c4c4;
