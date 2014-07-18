@@ -24,15 +24,15 @@ div.project_header {
 	}
 }
 .subsection {
-	border:1px solid #00000F;
+	border:2px outset rgba(255,255,255,0.3);
 	border-radius: 25px;
 	margin:35px 7px;
 	padding:10px;
 	padding-left:0px;
 	background-image:url('section_slice.jpg');
 	background-repeat: repeat-x;
-	background-color: #0000FF;
-	height:390px;
+	background-color: black;
+	height:389px;
 	overflow: hidden;
 	color:white;
 
