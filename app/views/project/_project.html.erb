@@ -33,7 +33,9 @@
 						<% end %>
 					<% end %>
 				</div>
-				<%= render 'project/slider_arrow' %>
+				<% if images.length > 1 or videos.length > 1 %>
+					<%= render 'project/slider_arrow' %>
+				<% end %>
 			</div>
 		</div>
 	<% else %>

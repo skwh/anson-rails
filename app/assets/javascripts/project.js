@@ -1,7 +1,9 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 var ready;
+var sliders = [];
 ready = function() {
+	sliders = [];
 	var subsections = $('.subsection');
 	var left_aligns = $('.left_align');
 	var right_aligns = $('.right_align');
@@ -31,16 +33,6 @@ ready = function() {
 		});
 	}
 
-	var options = { 
-		$AutoPlay: true,
-		$AutoPlayInterval: 5000,
-		$DragOrientation: 0,
-		$FillMode: 1,
-		$ArrowNavigatorOptions: {
-			$Class: $JssorArrowNavigator$,
-			$ChanceToShow: 2
-		}
-	};
 	var slider_divs = $("div[id*='slider']");
 	var right_align_divs = $('div.right_align');
 	var slides_divs = $("div[u='slides']");
@@ -59,8 +51,23 @@ ready = function() {
 				video_divs[k].style.height = (parseInt(right_align_dimensions[1],10) - 10) + "px";
 			}
 		}
+
+		var options = { 
+			$AutoPlay: true,
+			$AutoPlayInterval: 5000,
+			$DragOrientation: 0,
+			$FillMode: 1
+		};
+		if ($(slides_divs[i]).children().length > 1) {
+			options.$ArrowNavigatorOptions = {
+					$Class: $JssorArrowNavigator$,
+					$ChanceToShow: 2
+				}
+		}
+
 		//create the jssor slider object with the current slider's id and the options
 		jssor_slider = new $JssorSlider$('slider_container_'+current_slider_id, options);
+		sliders.push(jssor_slider);
 	};
 	repositionArrowsAfterResize();
 	Lightbox_plugin();
@@ -70,12 +77,13 @@ window.onresize = function(event) {
 }
 
 function repositionArrowsAfterResize() {
-	//correct the positions of the arrows after the window is resized
-	var slider_divs = $("div.right_align");
-	if (slider_divs.length != 0) {
+	//correct the positions of the arrows after the window is resize
+	if (sliders.length != 0) {
 		var slider_widths = parseInt($('div.right_align').getStyleObject().width,10);
-		for (var i=0;i<slider_divs.length;i++) {
-			$('.jssora01r')[i].style.left=(slider_widths-53)+"px";
+		for (var i=0;i<sliders.length;i++) {
+			if (sliders[i].$SlidesCount() > 1) {
+				$('.jssora01r')[i].style.left=(slider_widths-53)+"px";
+			}
 		}
 	}
 }
