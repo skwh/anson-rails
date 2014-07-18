@@ -5,9 +5,12 @@ ready = function() {
 	var subsections = $('.subsection');
 	var left_aligns = $('.left_align');
 	var right_aligns = $('.right_align');
-	if (left_aligns.length != 0) {
+	if (left_aligns.length != 0 && right_aligns.length != 0) {
 		//find the width of the aligns for each subsection
 		for (var i=0;i<subsections.length;i++) {
+			if  ($(subsections[i]).children().length < 2) {
+				continue;
+			}
 			var subsection_width = parseInt($(subsections[i]).getStyleObject().width,10);
 			var left_align_width = parseInt($(left_aligns[i]).getStyleObject().width,10);
 			var right_align_width = parseInt($(right_aligns[i]).getStyleObject().width,10);
@@ -21,7 +24,8 @@ ready = function() {
 			left_aligns[i].style.marginLeft = av_space + "px";
 			right_aligns[i].style.marginRight = av_space + "px";
 		}
-	} else {
+	}
+	if ($('.project_content').length != 0) {
 		$('.project_content').each(function() {
 			$(this).css("margin","0px 30px");
 		});
