@@ -1,40 +1,58 @@
 <div class="subsection">
-	<div class="left_align">
-		<h4 class="project_title"><%= project.title %></h4>
-		<% if !project.subtitle.empty? %>
-			<h5 class="project_subtitle"><%= project.subtitle %></h5>
-		<% end %>
-		<hr />
-		<p class="project_description"><%= project.description %>
-			<% if user_verified? %>
-			<br />
-			<span class="editing_controls">
-				<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
-				 | 
-				<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
-			</span>
+	<% if !project.images.empty? or !project.videos.empty? %>
+		<div class="left_align">
+			<h4 class="project_title"><%= project.title %></h4>
+			<% if !project.subtitle.empty? %>
+				<h5 class="project_subtitle"><%= project.subtitle %></h5>
 			<% end %>
-		</p>
-	</div>
-	<% if !project.images.nil? or !project.videos.nil? %>
-	<div class="right_align">
-		<div id="slider_container_<%= project.id %>" style="position: relative; top: 0px; left: 0px;height: 391px;" data-project-id="<%= project.id %>">
-			<div u="slides" style="cursor:-webkit-zoom-in;cursor: zoom-in; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 391px;">
-				<% if !project.images.nil? %>
-					<% images = project.images.split(',') %>
-					<% images.each_index do |i| %>
-						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>" style="cursor:-webkit-zoom-in;cursor: zoom-in;" u="image"><img u="image" src="<%= images[i] %>" /></a></div>
-					<% end %>
+			<hr />
+			<p class="project_description"><%= project.description %>
+				<% if user_verified? %>
+				<br />
+				<span class="editing_controls">
+					<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
+					 | 
+					<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
+				</span>
 				<% end %>
-				<% if !project.videos.nil? %>
-					<% videos = project.videos.split(',') %>
-					<% videos.each do |i| %>
-						<div><div u="player"><%= render 'project/video_frame', :video_url => i %></div></div>
-					<% end %>
-				<% end %>
-			</div>
-			<%= render 'project/slider_arrow' %>
+			</p>
 		</div>
-	</div>
+		<div class="right_align">
+			<div id="slider_container_<%= project.id %>" style="position: relative; top: 0px; left: 0px;height: 391px;" data-project-id="<%= project.id %>">
+				<div u="slides" style="cursor:-webkit-zoom-in;cursor: zoom-in; position: absolute; overflow: hidden; left: 0px; top: 0px;height: 391px;">
+					<% if !project.images.nil? %>
+						<% images = project.images.split(',') %>
+						<% images.each_index do |i| %>
+							<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>" style="cursor:-webkit-zoom-in;cursor: zoom-in;" u="image"><img u="image" src="<%= images[i] %>" /></a></div>
+						<% end %>
+					<% end %>
+					<% if !project.videos.nil? %>
+						<% videos = project.videos.split(',') %>
+						<% videos.each do |i| %>
+							<div><div u="player"><%= render 'project/video_frame', :video_url => i %></div></div>
+						<% end %>
+					<% end %>
+				</div>
+				<%= render 'project/slider_arrow' %>
+			</div>
+		</div>
+	<% else %>
+		<div class="project_content">
+			<h4 class="project_title"><%= project.title %></h4>
+			<% if !project.subtitle.empty? %>
+				<h5 class="project_subtitle"><%= project.subtitle %></h5>
+			<% end %>
+			<hr />
+			<p class="project_description"><%= project.description %>
+				<% if user_verified? %>
+				<br />
+				<span class="editing_controls">
+					<a class="edit nolink" href=<%= "/projects/#{project.id}/edit" %>>Edit</a>
+					 | 
+					<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
+				</span>
+				<% end %>
+			</p>
+		</div>
 	<% end %>
 </div>

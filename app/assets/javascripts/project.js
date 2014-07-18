@@ -5,20 +5,26 @@ ready = function() {
 	var subsections = $('.subsection');
 	var left_aligns = $('.left_align');
 	var right_aligns = $('.right_align');
-	//find the width of the aligns for each subsection
-	for (var i=0;i<subsections.length;i++) {
-		var subsection_width = parseInt($(subsections[i]).getStyleObject().width,10);
-		var left_align_width = parseInt($(left_aligns[i]).getStyleObject().width,10);
-		var right_align_width = parseInt($(right_aligns[i]).getStyleObject().width,10);
-		var align_width = left_align_width + right_align_width;
-		//find the amount of avaliable space for margins
-		var av_space = (subsection_width-align_width)/2;
-		if (av_space > 35) {
-			av_space = 35;
+	if (left_aligns.length != 0) {
+		//find the width of the aligns for each subsection
+		for (var i=0;i<subsections.length;i++) {
+			var subsection_width = parseInt($(subsections[i]).getStyleObject().width,10);
+			var left_align_width = parseInt($(left_aligns[i]).getStyleObject().width,10);
+			var right_align_width = parseInt($(right_aligns[i]).getStyleObject().width,10);
+			var align_width = left_align_width + right_align_width;
+			//find the amount of avaliable space for margins
+			var av_space = (subsection_width-align_width)/2;
+			if (av_space > 35) {
+				av_space = 35;
+			}
+			//set the margins
+			left_aligns[i].style.marginLeft = av_space + "px";
+			right_aligns[i].style.marginRight = av_space + "px";
 		}
-		//set the margins
-		left_aligns[i].style.marginLeft = av_space + "px";
-		right_aligns[i].style.marginRight = av_space + "px";
+	} else {
+		$('.project_content').each(function() {
+			$(this).css("margin","0px 30px");
+		});
 	}
 
 	var options = { 
@@ -62,9 +68,11 @@ window.onresize = function(event) {
 function repositionArrowsAfterResize() {
 	//correct the positions of the arrows after the window is resized
 	var slider_divs = $("div.right_align");
-	var slider_widths = parseInt($('div.right_align').getStyleObject().width,10);
-	for (var i=0;i<slider_divs.length;i++) {
-		$('.jssora01r')[i].style.left=(slider_widths-53)+"px";
+	if (slider_divs.length != 0) {
+		var slider_widths = parseInt($('div.right_align').getStyleObject().width,10);
+		for (var i=0;i<slider_divs.length;i++) {
+			$('.jssora01r')[i].style.left=(slider_widths-53)+"px";
+		}
 	}
 }
 
