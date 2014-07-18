@@ -28,6 +28,7 @@ div.project_header {
 	border-radius: 25px;
 	margin:35px 7px;
 	padding:10px;
+	padding-left:0px;
 	background-image:url('section_slice.jpg');
 	background-repeat: repeat-x;
 	background-color: #0000FF;
@@ -49,15 +50,15 @@ div.project_header {
 	}
 
 	.left_align {
-		margin: 0px 20px;
+		margin:0px;
+		margin-left:35px;
+		margin-right:10px;
 		float:left;
 	}
 	.right_align {
 		float:right;
-		margin:10px;
+		margin:25px;
 		margin-top:0px;
-		/*border:2px solid #ccc;
-		border-radius:15px;*/
 		overflow:hidden;
 		height:390px;
 	}
@@ -104,6 +105,7 @@ div.project_header {
 		margin-top: 15px;
 		margin-bottom: 18px;
 		border-color:#949494;
+		background-color:#949494;
 	}
 }
 
