@@ -4,18 +4,14 @@ var ready;
 var sliders = [];
 ready = function() {
 	sliders = [];
-	var subsections = $('.subsection');
-	var left_aligns = $('.left_align');
-	var right_aligns = $('.right_align');
-	if (left_aligns.length != 0 && right_aligns.length != 0) {
-		//find the width of the aligns for each subsection
-		for (var i=0;i<subsections.length;i++) {
-			if  ($(subsections[i]).children().length < 2) {
-				continue;
-			}
-			var subsection_width = parseInt($(subsections[i]).getStyleObject().width,10);
-			var left_align_width = parseInt($(left_aligns[i]).getStyleObject().width,10);
-			var right_align_width = parseInt($(right_aligns[i]).getStyleObject().width,10);
+	$('.subsection').each(function(e) {
+		if  ($(this).children().length == 2) {
+			var child_left_align = $(this).children()[0];
+			var child_right_align = $(this).children()[1];
+
+			var subsection_width = parseInt($(this).getStyleObject().width,10);
+			var left_align_width = parseInt($(child_left_align).getStyleObject().width,10);
+			var right_align_width = parseInt($(child_right_align).getStyleObject().width,10);
 			var align_width = left_align_width + right_align_width;
 			//find the amount of avaliable space for margins
 			var av_space = (subsection_width-align_width)/2;
@@ -23,10 +19,10 @@ ready = function() {
 				av_space = 35;
 			}
 			//set the margins
-			left_aligns[i].style.marginLeft = av_space + "px";
-			right_aligns[i].style.marginRight = av_space + "px";
+			child_left_align.style.marginLeft = av_space + "px";
+			child_right_align.style.marginRight = av_space + "px";
 		}
-	}
+	});
 	if ($('.project_content').length != 0) {
 		$('.project_content').each(function() {
 			$(this).css("margin","0px 30px");
