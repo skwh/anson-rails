@@ -76,11 +76,10 @@ function repositionArrowsAfterResize() {
 	//correct the positions of the arrows after the window is resize
 	if (sliders.length != 0) {
 		var slider_widths = parseInt($('div.right_align').getStyleObject().width,10);
-		for (var i=0;i<sliders.length;i++) {
-			if (sliders[i].$SlidesCount() > 1) {
-				$('.jssora01r')[i].style.left=(slider_widths-53)+"px";
-			}
-		}
+		$('.right_align').each(function() {
+			var right_arrow = $(this).children().find(".jssora01r");
+			$(right_arrow).css("left",(slider_widths-53)+"px");
+		});
 	}
 }
 
