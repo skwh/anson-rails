@@ -6,7 +6,7 @@
 				<h5 class="project_subtitle"><%= project.subtitle %></h5>
 			<% end %>
 			<hr />
-			<p class="project_description"><%= project.description %>
+			<p class="project_description"><%= project.parsed_description.html_safe %>
 				<% if user_verified? %>
 				<br />
 				<span class="editing_controls">
