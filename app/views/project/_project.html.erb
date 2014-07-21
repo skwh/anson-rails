@@ -6,7 +6,7 @@
 				<h5 class="project_subtitle"><%= project.subtitle %></h5>
 			<% end %>
 			<hr />
-			<p class="project_description"><%= project.parsed_description.html_safe %>
+			<span class="project_description"><%= project.parsed_description.html_safe %>
 				<% if user_verified? %>
 				<br />
 				<span class="editing_controls">
@@ -15,7 +15,7 @@
 					<a class="delete nolink" href=<%= "/projects/#{project.id}/delete" %>>Delete</a>
 				</span>
 				<% end %>
-			</p>
+			</span>
 		</div>
 		<div class="right_align">
 			<div id="slider_container_<%= project.id %>" style="position: relative; top: 0px; left: 0px;height: 391px;" data-project-id="<%= project.id %>">
