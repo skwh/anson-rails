@@ -16,7 +16,7 @@ module ApplicationHelper
 			1
 		elsif fullpath == "/about"
 			2
-		elsif fullpath == "/design"
+		elsif fullpath == "/animation" or fullpath == "/design"
 			3
 		elsif fullpath == "/art"
 			4
