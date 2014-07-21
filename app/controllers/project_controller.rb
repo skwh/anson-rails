@@ -28,7 +28,7 @@ class ProjectController < ApplicationController
 
 	def create
 		@project = Project.create(project_params)
-		@project.parsed_description = markdown(params[:project][:content])
+		@project.parsed_description = markdown(params[:project][:description])
 		if @project.save
 			flash[:sucess] = "Project Submitted."
 			redirect_to "/#{@project.section}"
@@ -43,7 +43,7 @@ class ProjectController < ApplicationController
 
 	def update
 		@project = Project.find(params[:id])
-		@project.parsed_description = markdown(params[:project][:content])
+		@project.parsed_description = markdown(params[:project][:description])
 		if @project.update_attributes(project_params)
 			redirect_to "/#{@project.section}"
 		else
