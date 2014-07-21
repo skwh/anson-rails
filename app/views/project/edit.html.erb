@@ -13,7 +13,7 @@
 			<p><%= f.label :videos %><%= f.text_field :videos %></p>
 			<p><%= f.label :section %>
 			<select id="project_section" name="project[section]" type="text">
-				<option <% if @project.section=="design" %>selected<% end %> value="design">3D Design</option>
+				<option <% if @project.section=="design" %>selected<% end %> value="design">Animation</option>
 				<option <% if @project.section=="art" %>selected<% end %> value="art">Digital Art</option>
 				<option <% if @project.section=="effects" %>selected<% end %> value="effects">Visual Effects</option>
 			</select></p>

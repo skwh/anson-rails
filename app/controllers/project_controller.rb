@@ -2,8 +2,8 @@ class ProjectController < ApplicationController
 	include ProjectHelper, ApplicationHelper
 	before_action :begin_verification, only: [:new, :edit, :destroy, :create, :update]
 
-	def design
-		@design = Project.where(section:"design").order(updated_at: :desc)
+	def anim
+		@anim = Project.where(section:"design").order(updated_at: :desc)
 	end
 
 	def art
@@ -12,6 +12,10 @@ class ProjectController < ApplicationController
 
 	def effects
 		@effects = Project.where(section:"effects").order(updated_at: :desc)
+	end
+
+	def redirect
+		redirect_to '/animation'
 	end
 
 	def show

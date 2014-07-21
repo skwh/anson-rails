@@ -19,7 +19,8 @@ AnsonRails::Application.routes.draw do
   get '/page_data/:id/edit' => 'static_pages#edit', as: :static_data_edit
   patch '/page_data/:id' => 'static_pages#update', as: :static_data_update
 
-  get '/design' => 'project#design'
+  get '/animation' => 'project#anim'
+  get '/design' => 'project#redirect'
   get '/art' => 'project#art'
   get '/effects' => 'project#effects'
 
