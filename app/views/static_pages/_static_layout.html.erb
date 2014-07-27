@@ -10,7 +10,9 @@
 					<% end %>
 				<% end %>
 			</div>
-			<%= render 'project/slider_arrow' %>
+			<% if images.length > 1 %>
+				<%= render 'project/slider_arrow' %>
+			<% end %>
 		</div>
 	<% end %>
 	<% if user_verified? %>
