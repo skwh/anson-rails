@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721033645) do
+ActiveRecord::Schema.define(version: 20140729004740) do
+
+  create_table "images", force: true do |t|
+    t.string   "large"
+    t.string   "thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "project_id"
+  end
 
   create_table "passwords", force: true do |t|
     t.string   "password_digest"
@@ -26,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140721033645) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "subtitle"
-    t.text     "images",             limit: 255, default: ""
     t.text     "videos",             limit: 255, default: ""
     t.text     "parsed_description",             default: ""
   end

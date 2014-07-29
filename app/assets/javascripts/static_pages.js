@@ -33,7 +33,7 @@ window.onresize = function(event) {
 
 function repositionArrowsAfterResize() {
 	//correct the positions of the arrows after the window is resized
-	if ($($("div[u='slides']")[0]).children().length > 1) {
+	if ($("div[u='slides']").children().length > 1) {
 		var slider_width = parseInt($('#general_body').getStyleObject().width,10);
 		var slider_height = parseInt($('#slider').getStyleObject().height,10);
 		$('.jssora01r')[0].style.left=(slider_width-53)+"px";

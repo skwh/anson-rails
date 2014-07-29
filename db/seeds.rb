@@ -5,23 +5,39 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+images = Image.create([{large:"../assets/demopage/image-1.jpg",
+	thumbnail:"../assets/demopage/thumb-1.jpg",
+	project_id:1},
+	{large:"../assets/demopage/image-2.jpg",
+		thumbnail:"../assets/demopage/thumb-2.jpg",
+		project_id:1},
+		{large:"../assets/demopage/image-3.jpg",
+			thumbnail:"../assets/demopage/thumb-2.jpg",
+			project_id:1},
+			{large:"../assets/demopage/image-1.jpg",
+				thumbnail:"../assets/demopage/thumb-1.jpg",
+				project_id:2},
+				{large:"../assets/demopage/image-2.jpg",
+					thumbnail:"../assets/demopage/thumb-2.jpg",
+					project_id:3}])
+puts "Images seeded!"
 
 projects = Project.create([{title:"Animation Project",
 	subtitle:"Animation Subtitle",
 	description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
+	parsed_description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
 	section:"design",
-	images:"../assets/si_1.jpeg,../assets/si_2.jpeg,../assets/si_3.jpeg,../assets/si_4.png",
 	videos:"xjjl9zeJjzw"},{
 		title:"Digital Art Project",
 		subtitle:"Digital Art Subtitle",
 		description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
-		section:"art",
-		images:"../assets/si_1.jpeg,../assets/si_2.jpeg,../assets/si_3.jpeg,../assets/si_4.png"},{
+		parsed_description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
+		section:"art"},{
 			title:"Visual Effects Project",
 			subtitle:"Visual Effects Subtitle",
 			description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
+			parsed_description:"Lorizzle ipsum boom shackalack sit amizzle, i'm in the shizzle adipiscing its fo rizzle. Yippiyo sapien velizzle, doggy volutpizzle, suscipizzle quizzle, fo shizzle my nizzle vizzle, arcu. Pellentesque egizzle bizzle. Break it down erizzle. Fusce izzle shizzlin dizzle fizzle izzle tempus my shizz. Maurizzle pellentesque nibh et turpizzle. Shizzlin dizzle in tortizzle. Pellentesque eleifend rhoncizzle nisi. In tellivizzle bizzle platea dictumst. Bizzle funky fresh. Gangsta i'm in the shizzle, get down get down eu, mattizzle ac, shizzlin dizzle vitae, go to hizzle. Tellivizzle that's the shizzle. Integer semper velit sizzle ass.",
 			section:"effects",
-			images:"../assets/si_1.jpeg,../assets/si_2.jpeg,../assets/si_3.jpeg,../assets/si_4.png",
 			videos:"xjjl9zeJjzw"}])
 puts "Projects seeded!"
 
