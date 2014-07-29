@@ -16,7 +16,6 @@ AnsonRails::Application.routes.draw do
   post '/projects' => "project#create"
 
   post '/images' => "image#create"
-  patch '/images/:id' => 'image#update', as: :image_update
   get '/images/:id/delete' => 'image#destroy', as: :image_destroy
 
   get '/page_data/:id' => 'static_pages#static_path', as: :static_datum

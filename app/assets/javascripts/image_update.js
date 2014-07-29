@@ -11,19 +11,19 @@ ready = function() {
 				},
 				success:function(msg) {
 					if (msg == "create_success") {
-						//add the form to the thingmabobber
+						
 					} else {
-						//oops
+						
 					}
 				},
 				error:function(msg) {
-					//oops
+					
 				}
 			})
 		});
 
 		$('button[class*="delete_image"]').on('click',function(e) {
-			
+
 		});
 	}
 }
