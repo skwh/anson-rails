@@ -1,7 +1,7 @@
 <% provide(:title, "Digital Art") %>
 <% if !@art.empty? %>
 	<% @art.each do |project| %>
-	<%= render 'project/project', :project => project %>
+		<%= render 'project/project', :project => project %>
 	<% end %>
 <% else %>
 	<div id="general_body">

@@ -6,7 +6,7 @@
 				<% if !data.sdata.empty? %>
 					<% images = data.sdata.split(',') %>
 					<% images.each_index do |i| %>
-						<div><a href="<%= images[i] %>" data-lightbox="image_<%= i %>" u="image"><img u="image" src="<%= images[i] %>" /></a></div>
+						<div><img u="image" src="<%= images[i] %>" /></div>
 					<% end %>
 				<% end %>
 			</div>
