@@ -1,0 +1,5 @@
+<% project.images.each do |image| %>
+	<%= field.fields_for :images, image do |i| %>
+		<li class="li_image_<%=image.id %>">Image large url:<%= i.text_field :large %>, Image thumb url:<%= i.text_field :thumbnail %>, <input type="button" value="Delete Image" class="delete_image_<%= image.id %>" /></li>
+	<% end %>
+<% end %>
