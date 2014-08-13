@@ -15,31 +15,9 @@ ready = function() {
 		$DragOrientation: 0,
 		$FillMode: 1
 	};
-	if ($(slides_div).children().length > 1) {
-		options.$ArrowNavigatorOptions = {
-				$Class: $JssorArrowNavigator$,
-				$ChanceToShow: 2
-		}
-	}
 
 	jssor_slider = new $JssorSlider$('slider', options);
-	//resize the boxes so that the arrows are positioned correctly
-	repositionArrowsAfterResize();
 	Lightbox_plugin();
-}
-window.onresize = function(event) {
-	repositionArrowsAfterResize();
-}
-
-function repositionArrowsAfterResize() {
-	//correct the positions of the arrows after the window is resized
-	if ($("div[u='slides']").children().length > 1) {
-		var slider_width = parseInt($('#general_body').getStyleObject().width,10);
-		var slider_height = parseInt($('#slider').getStyleObject().height,10);
-		$('.jssora01r')[0].style.left=(slider_width-53)+"px";
-		$('.jssora01r')[0].style.top = ((slider_height/2)-53)+"px";
-		$('.jssora01l')[0].style.top = ((slider_height/2)-53)+"px";
-	}
 }
 
 $(document).ready(ready);
